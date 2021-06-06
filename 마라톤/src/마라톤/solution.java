@@ -44,7 +44,7 @@ public class solution {
     }
 	
     public String solution1(String[] participant, String[] completion) {
-        
+    	String answer = "";
         int i; // [3] 때문에 전역변수로 선언
 
         // [1] 각 배열을 오름차순으로 정렬
@@ -55,10 +55,12 @@ public class solution {
         // completion의 수 만큼 비교해야 index out 에러가 안남
         for (i = 0; i < completion.length; i++) {
             if (!participant[i].equals(completion[i])) {
-                return participant[i];
+                answer = participant[i];
             }
         }
-        return participant[i]; // [3] 완주하지 못한 선수가 가장 끝에 있는 경우
+    answer= participant[i]; 
+    return answer;
+        // [3] 완주하지 못한 선수가 가장 끝에 있는 경우
     }
 	
 	
